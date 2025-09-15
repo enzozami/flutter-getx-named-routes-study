@@ -21,6 +21,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Inicial'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/paginaquenaoexiste');
+              },
+              child: Text('pagina que nao existe'),
+            ),
           ],
         ),
       ),

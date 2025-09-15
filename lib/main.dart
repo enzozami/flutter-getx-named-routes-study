@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_named_route/pages/home_page.dart';
 import 'package:get_named_route/pages/inicial/inicial_page1.dart';
+import 'package:get_named_route/pages/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      unknownRoute: GetPage(name: '/404', page: () => RotaNaoEncontradaPage()),
+      initialRoute: '/home',
       getPages: [
-        GetPage(name: '/', page: () => HomePage()),
+        GetPage(name: '/home', page: () => HomePage()),
         GetPage(name: '/inicial/page1', page: () => InicialPage1()),
       ],
     );
