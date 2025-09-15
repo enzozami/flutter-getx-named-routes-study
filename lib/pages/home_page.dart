@@ -32,6 +32,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Envio de Params'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/middleware');
+              },
+              child: Text('Middlewares'),
+            ),
           ],
         ),
       ),

@@ -6,6 +6,9 @@ import 'package:get_named_route/pages/envio_params/path_param_page.dart';
 import 'package:get_named_route/pages/envio_params/query_param_page.dart';
 import 'package:get_named_route/pages/home_page.dart';
 import 'package:get_named_route/pages/inicial/inicial_page1.dart';
+import 'package:get_named_route/pages/middlewares/access_denied.dart';
+import 'package:get_named_route/pages/middlewares/middlewares_home_page.dart';
+import 'package:get_named_route/pages/middlewares/route_middlewares.dart';
 import 'package:get_named_route/pages/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
@@ -38,7 +41,15 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/pathParam/:nome/jornadaGetX', page: () => PathParamPage()),
             GetPage(name: '/queryParam', page: () => QueryParamPage()),
           ],
-        )
+        ),
+        GetPage(
+          name: '/middleware',
+          page: () => MiddlewaresHomePage(),
+          middlewares: [
+            RouteMiddlewares(),
+          ],
+        ),
+        GetPage(name: '/accessDenied', page: () => AccessDenied()),
       ],
     );
   }
