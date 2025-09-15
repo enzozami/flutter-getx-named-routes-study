@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,6 +25,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/paginaquenaoexiste');
               },
               child: Text('pagina que nao existe'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/envioParam');
+              },
+              child: Text('Envio de Params'),
             ),
           ],
         ),
