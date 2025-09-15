@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
       ),
       unknownRoute: GetPage(name: '/404', page: () => RotaNaoEncontradaPage()),
       initialRoute: '/home',
+      routingCallback: ((Routing? routing) {
+        debugPrint(routing?.previous);
+        debugPrint(routing?.current);
+      }),
       getPages: [
         GetPage(name: '/home', page: () => HomePage()),
         GetPage(name: '/inicial/page1', page: () => InicialPage1()),
