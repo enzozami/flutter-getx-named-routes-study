@@ -9,6 +9,7 @@ import 'package:get_named_route/pages/inicial/inicial_page1.dart';
 import 'package:get_named_route/pages/middlewares/access_denied.dart';
 import 'package:get_named_route/pages/middlewares/middlewares_home_page.dart';
 import 'package:get_named_route/pages/middlewares/route_middlewares.dart';
+import 'package:get_named_route/pages/nested_navigation/home_nested_navigation.dart';
 import 'package:get_named_route/pages/rota_nao_encontrada/rota_nao_encontrada_page.dart';
 
 void main() {
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         GetPage(name: '/accessDenied', page: () => AccessDenied()),
+        GetPage(name: '/nestedNavigation', page: () => HomeNestedNavigation()),
       ],
     );
   }
